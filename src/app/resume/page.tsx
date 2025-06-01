@@ -215,16 +215,16 @@ function SectionNavigationSidebar({
   };
 
   return (
-    <aside className="fixed left-0 top-0 z-10 flex h-screen w-1/4 flex-col items-end justify-center overflow-hidden py-20 pl-8 pr-12 lg:w-1/5 xl:w-1/6">
-      <div className="flex flex-col space-y-8">
+    <aside className="fixed left-0 top-0 z-10 flex h-screen w-2/5 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 flex-col items-end justify-center overflow-hidden py-20 pl-4 pr-6 sm:pl-6 sm:pr-8 md:pl-8 md:pr-12">
+      <div className="flex flex-col space-y-6 sm:space-y-8">
         {sections.map((section) => (
           <button
             key={section}
             type="button"
             className={`cursor-pointer font-bold transition-all duration-500 hover:scale-105 hover:opacity-90 ${
               activeSection === section
-                ? "scale-110 text-6xl tracking-wider text-white lg:text-5xl xl:text-4xl"
-                : "text-2xl opacity-60 text-gray-500 lg:text-xl xl:text-lg"
+                ? "scale-110 text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-4xl tracking-wider text-white"
+                : "text-lg sm:text-xl md:text-2xl lg:text-xl xl:text-lg opacity-60 text-gray-500"
             }`}
             onClick={() => onSectionClick(section)}
           >
@@ -372,7 +372,7 @@ export default function ResumePage() {
         onSectionClick={handleSectionClick}
       />
 
-      <main className="ml-[25%] flex-1 space-y-20 overflow-y-auto px-8 py-20 scroll-smooth lg:ml-[20%] xl:ml-[16.666667%]">
+      <main className="ml-[40%] sm:ml-[33.333333%] md:ml-[25%] lg:ml-[20%] xl:ml-[16.666667%] flex-1 space-y-20 overflow-y-auto px-4 sm:px-6 md:px-8 py-20 scroll-smooth">
         <AboutSection />
         <YearSection year="sophomore" experiences={RESUME_DATA.sophomore} />
         <YearSection year="freshman" experiences={RESUME_DATA.freshman} />

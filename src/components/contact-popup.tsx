@@ -11,8 +11,8 @@ export default function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
   return (
     <>
       {isOpen && (
-        <div className="fixed bottom-8 right-8 z-50 w-80 max-w-sm">
-          <Card className="bg-white border-gray-300 shadow-2xl">
+        <div className="fixed inset-4 sm:inset-auto sm:bottom-8 sm:right-8 z-50 flex items-center justify-center sm:block">
+          <Card className="bg-white border-gray-300 shadow-2xl w-full max-w-sm sm:w-80">
             <Card.Header>
               <div className="h-16 w-full transition-transform duration-300" style={{backgroundColor: 'var(--color-tertiary)'}} />
             </Card.Header>
