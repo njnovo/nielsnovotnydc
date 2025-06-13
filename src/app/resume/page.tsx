@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import Card from '../../components/card';
 
 interface ExperienceItem {
+  img: string; 
   id: string;
   title: string;
   organization?: string;
@@ -17,123 +18,139 @@ const RESUME_DATA = {
     {
       id: '01',
       title: "UT Austin Robotics Camp",
-      year: "2023",
+      year: "2024",
       category: "tech" as const,
-      description: "Attended intensive robotics program at University of Texas Austin"
+      description: "Attended intensive robotics program at University of Texas Austin",
+      img: "placeholder"
     },
     {
       id: '02',
       title: "First Tech Challenge - Automated Androids",
-      year: "2023",
+      year: "2024-2025",
       category: "tech" as const,
-      description: "Participated in robotics competition focusing on autonomous robot design"
+      description: "Participated in robotics competition focusing on autonomous robot design",
+      img: "https://photos.fife.usercontent.google.com/pw/AP1GczMuIZhBUD3ahJg4CkZfQpjlZFwxoQfzUrK7Wo99BIFnjePv_bTtBXX_Ueun3AsM7Rc38mjVFNLlIW6Gp9APkYoSVxMSTlA=w1082-h1624-s-no-gm?authuser=0"
     },
     {
       id: '03',
       title: "USACO Bronze",
-      year: "2023",
+      year: "2024",
       category: "academic" as const,
-      description: "Achieved Bronze level in USA Computing Olympiad"
+      description: "Achieved Bronze level in USA Computing Olympiad",
+      img: "placeholder"
     },
     {
       id: '04',
       title: "USACO Camp",
-      year: "2023",
+      year: "2024",
       category: "academic" as const,
-      description: "Attended competitive programming training camp"
+      description: "Attended competitive programming training camp",
+      img: "placeholder"
     },
     {
       id: '05',
       title: "Find the Future Website Build",
-      year: "2023",
+      year: "2024-2025",
       category: "tech" as const,
-      description: "Developed website for educational initiative"
+      description: "Developed website for educational initiative",
+      img: "placeholder"
     },
     {
       id: '06',
       title: "FBLA Coding Category - State Competition",
-      year: "2023",
+      year: "2024",
       category: "academic" as const,
-      description: "Awarded prize in coding category, advanced to state level competition"
+      description: "Awarded prize in coding category, advanced to state level competition",
+      img: "placeholder"
     },
     {
       id: '07',
       title: "Science Research - Controlled Grow Project",
       organization: "Holly Lab Collaboration",
-      year: "2023",
+      year: "2024-2025",
       category: "academic" as const,
-      description: "Conducted research on controlled plant growth systems"
+      description: "Conducted research on controlled plant growth systems",
+      img: "placeholder"
     },
     {
       id: '08',
-      title: "Blackstone Neurology Project",
-      year: "2023",
+      title: "Blackrock Neuroscience Project",
+      year: "2025",
       category: "academic" as const,
-      description: "Participated in neuroscience research initiative"
+      description: "Participated in neuroscience research initiative",
+      img: "placeholder"
     },
     {
       id: '09',
       title: "Principal Cello",
       organization: "Symphonic Orchestra",
-      year: "2023",
+      year: "2024-2025",
       category: "music" as const,
-      description: "Lead cellist in symphonic orchestra"
+      description: "Lead cellist in symphonic orchestra",
+      img: "placeholder"
     },
     {
       id: '10',
       title: "Piano Guild Participant",
       organization: "Colorado Cantabile - Year 10",
-      year: "2023",
+      year: "2024",
       category: "music" as const,
-      description: "Advanced piano performance and theory program"
+      description: "Advanced piano performance and theory program",
+      img: "placeholder"
     },
     {
       id: '11',
       title: "Data Science Student",
       organization: "Juni Learning - Year 9",
-      year: "2022",
+      year: "2024",
       category: "tech" as const,
-      description: "Completed data science curriculum and projects"
+      description: "Completed data science curriculum and projects",    
+      img: "placeholder"
     },
     {
       id: '12',
       title: "Squash Competitions",
       organization: "Hashim Khan, Silver Level Squash Zone, Greenwood Men's League",
-      year: "2023",
+      year: "2024",
       category: "sports" as const,
-      description: "Competitive squash player in multiple leagues"
+      description: "Competitive squash player in multiple leagues",
+      img: "placeholder"
     },
     {
       id: '13',
       title: "Orchestra Cellist",
       organization: "Hadestown Musical",
-      year: "2023",
+      year: "2024-2025",
       category: "music" as const,
-      description: "Performed as cellist in musical theater production"
+      description: "Performed as cellist in musical theater production",
+      img: "placeholder"
     }
   ],
   sophomore: [
     {
       id: '14',
       title: "Orchestra Volunteer",
-      year: "2024",
+      year: "2025",
       category: "volunteer" as const,
-      description: "Volunteer work supporting orchestra programs"
+      description: "Volunteer work supporting orchestra programs",
+      img: "placeholder"
     },
     {
       id: '15',
       title: "Senior Volunteer",
       organization: "Caley Ridge",
-      year: "2024",
+      year: "2025",
       category: "volunteer" as const,
-      description: "Community service supporting senior citizens"
+      description: "Community service supporting senior citizens",
+      img: "placeholder"
     },
     {
-      id: '17',
-      title: "CSU SPUR Volunteer",
-      year: "2024",
-      category: "volunteer" as const,
-      description: "Volunteer work with Colorado State University research program"
+      id: '16',
+      title: "Amaxa Impact Intern",
+      year: "2025",
+      category: "tech" as const,
+      description: "Website building and design for Amaxa Impact, a non-profit organization that provides education and resources to underserved communities.",
+      img: "placeholder"
     }
   ]
 };
@@ -240,7 +257,7 @@ function ExperienceCard({ item }: { item: ExperienceItem }) {
   return (
     <Card>
       <Card.Header>
-        <div className="h-full w-full bg-gray-800 transition-transform duration-300 group-hover:scale-110" />
+        <img src={item.img} alt="Niels Novotny" className="w-full h-full object-cover" />
       </Card.Header>
 
       <Card.Content>
