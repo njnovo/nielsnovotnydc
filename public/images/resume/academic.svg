@@ -1,0 +1,23 @@
+<svg width="640" height="360" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
+  
+    <defs>
+      <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#111827" />
+        <stop offset="100%" stop-color="#0a0d08" />
+      </linearGradient>
+      <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+        <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#45662c" stroke-opacity="0.15" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="640" height="360" fill="url(#bgGrad)" />
+    <rect width="640" height="360" fill="url(#grid)" />
+    <text x="600" y="300" text-anchor="end" font-family="Arial, sans-serif" font-weight="700" font-size="220" fill="#45662c" fill-opacity="0.15">A</text>
+    <rect x="0.5" y="0.5" width="639" height="359" fill="none" stroke="#45662c" stroke-opacity="0.4" stroke-width="1" />
+  
+  <g transform="translate(280, 90)">
+    <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
+      <path d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" stroke="#9eaf8c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </g>
+  <text x="320" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="20" letter-spacing="2" fill="#FFFFFF">ACADEMIC</text>
+</svg>

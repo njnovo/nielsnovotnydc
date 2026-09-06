@@ -4,7 +4,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import Card from '../../components/card';
 
 interface ExperienceItem {
-  img: string; 
+  img?: string;
   id: string;
   title: string;
   organization?: string;
@@ -21,7 +21,6 @@ const RESUME_DATA = {
       year: "2024",
       category: "tech" as const,
       description: "Attended intensive robotics program at University of Texas Austin",
-      img: "placeholder"
     },
     {
       id: '02',
@@ -37,7 +36,6 @@ const RESUME_DATA = {
       year: "2024",
       category: "academic" as const,
       description: "Achieved Bronze level in USA Computing Olympiad",
-      img: "placeholder"
     },
     {
       id: '04',
@@ -45,7 +43,6 @@ const RESUME_DATA = {
       year: "2024",
       category: "academic" as const,
       description: "Attended competitive programming training camp",
-      img: "placeholder"
     },
     {
       id: '05',
@@ -53,7 +50,6 @@ const RESUME_DATA = {
       year: "2024-2025",
       category: "tech" as const,
       description: "Developed website for educational initiative",
-      img: "placeholder"
     },
     {
       id: '06',
@@ -61,7 +57,6 @@ const RESUME_DATA = {
       year: "2024",
       category: "academic" as const,
       description: "Awarded prize in coding category, advanced to state level competition",
-      img: "placeholder"
     },
     {
       id: '07',
@@ -70,7 +65,6 @@ const RESUME_DATA = {
       year: "2024-2025",
       category: "academic" as const,
       description: "Conducted research on controlled plant growth systems",
-      img: "placeholder"
     },
     {
       id: '08',
@@ -78,7 +72,6 @@ const RESUME_DATA = {
       year: "2025",
       category: "academic" as const,
       description: "Participated in neuroscience research initiative",
-      img: "placeholder"
     },
     {
       id: '09',
@@ -87,7 +80,6 @@ const RESUME_DATA = {
       year: "2024-2025",
       category: "music" as const,
       description: "Lead cellist in symphonic orchestra",
-      img: "placeholder"
     },
     {
       id: '10',
@@ -96,7 +88,6 @@ const RESUME_DATA = {
       year: "2024",
       category: "music" as const,
       description: "Advanced piano performance and theory program",
-      img: "placeholder"
     },
     {
       id: '11',
@@ -105,7 +96,6 @@ const RESUME_DATA = {
       year: "2024",
       category: "tech" as const,
       description: "Completed data science curriculum and projects",    
-      img: "placeholder"
     },
     {
       id: '12',
@@ -114,7 +104,6 @@ const RESUME_DATA = {
       year: "2024",
       category: "sports" as const,
       description: "Competitive squash player in multiple leagues",
-      img: "placeholder"
     },
     {
       id: '13',
@@ -123,7 +112,6 @@ const RESUME_DATA = {
       year: "2024-2025",
       category: "music" as const,
       description: "Performed as cellist in musical theater production",
-      img: "placeholder"
     }
   ],
   sophomore: [
@@ -133,7 +121,6 @@ const RESUME_DATA = {
       year: "2025",
       category: "volunteer" as const,
       description: "Volunteer work supporting orchestra programs",
-      img: "placeholder"
     },
     {
       id: '15',
@@ -142,7 +129,6 @@ const RESUME_DATA = {
       year: "2025",
       category: "volunteer" as const,
       description: "Community service supporting senior citizens",
-      img: "placeholder"
     },
     {
       id: '16',
@@ -150,7 +136,6 @@ const RESUME_DATA = {
       year: "2025",
       category: "tech" as const,
       description: "Website building and design for Amaxa Impact, a non-profit organization that provides education and resources to underserved communities.",
-      img: "placeholder"
     }
   ]
 };
@@ -254,10 +239,11 @@ function SectionNavigationSidebar({
 }
 
 function ExperienceCard({ item }: { item: ExperienceItem }) {
+  const imageSrc = item.img ?? `/images/resume/${item.category}.svg`;
   return (
     <Card>
       <Card.Header>
-        <img src={item.img} alt="Niels Novotny" className="w-full h-full object-cover" />
+        <img src={imageSrc} alt={item.title} className="w-full h-full object-cover" />
       </Card.Header>
 
       <Card.Content>
