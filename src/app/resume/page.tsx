@@ -21,6 +21,7 @@ const RESUME_DATA = {
       year: "2024",
       category: "tech" as const,
       description: "Attended intensive robotics program at University of Texas Austin",
+      img: "https://lh3.googleusercontent.com/pw/AP1GczP-qPAjtDXpmSX2eUL-rqaznugJaOy5Mt-myKWrZIiI52ACKgCBCdAIzTickSUWD2N_D9A0UFBwnfizZHNDztODQ50foRhNg68P_EMgxpmf6kZkMTTU=w1200",
     },
     {
       id: '02',
@@ -28,7 +29,7 @@ const RESUME_DATA = {
       year: "2024-2025",
       category: "tech" as const,
       description: "Participated in robotics competition focusing on autonomous robot design",
-      img: "https://photos.fife.usercontent.google.com/pw/AP1GczMuIZhBUD3ahJg4CkZfQpjlZFwxoQfzUrK7Wo99BIFnjePv_bTtBXX_Ueun3AsM7Rc38mjVFNLlIW6Gp9APkYoSVxMSTlA=w1082-h1624-s-no-gm?authuser=0"
+      img: "https://lh3.googleusercontent.com/pw/AP1GczMrkKrNZFIOxvPBz0W_6tZ9FFz6Qvi6HC4AnQNubG8EnSAkuWr3IBgFLxfuCvB31DSJnvFf34hkGIRbeUnl5QT2AHrGF3XzpfQdSbElU-JBXlPmfBZt=w1200",
     },
     {
       id: '03',
@@ -65,24 +66,35 @@ const RESUME_DATA = {
       year: "2024-2025",
       category: "academic" as const,
       description: "Conducted research on controlled plant growth systems",
+      img: "https://lh3.googleusercontent.com/pw/AP1GczM3xuO0KK8Jybnj8T3uxLNh54YMvyGRkZpZ4AsctSnZzJt0cZ7CraQM2GLJLMOcSu4MNqRJo8ipae5arQ6OVwyOIorfRHpr9b5NbxP9DnKMdcsN72UE=w1200",
     },
     {
       id: '08',
+      title: "🌱 ISEF - Plant Sciences",
+      organization: "Society for Science",
+      year: "2025",
+      category: "academic" as const,
+      description: "Presented plant sciences research at the International Science and Engineering Fair",
+      img: "https://lh3.googleusercontent.com/pw/AP1GczMyQZNgiuis985uyh4VnzqEZ2LPTeoYipm2sbojiC-DXMNCMF5rLOVBWVieN4ynQciHMFlZO3ljrRXGI2lX4znhRnofZvJXC8f-IAoNlGsdCQl0f6a6=w1200",
+    },
+    {
+      id: '09',
       title: "🧠 Blackrock Neuroscience Project",
       year: "2025",
       category: "academic" as const,
       description: "Participated in neuroscience research initiative",
     },
     {
-      id: '09',
+      id: '10',
       title: "🎻 Principal Cello",
       organization: "Symphonic Orchestra",
       year: "2024-2025",
       category: "music" as const,
       description: "Lead cellist in symphonic orchestra",
+      img: "https://lh3.googleusercontent.com/pw/AP1GczPYuIpCNl0YMObNKhvWqgydNW5ndLgr438n8lEY_g0sam8oSsp5IVAHqthk-zYbaTQwxCu86ipMlv7f49mqIRyQEaQZNfzO2V_n0j0HbM8VYoUahtmm=w1200",
     },
     {
-      id: '10',
+      id: '11',
       title: "🎹 Piano Guild Participant",
       organization: "Colorado Cantabile - Year 10",
       year: "2024",
@@ -90,7 +102,7 @@ const RESUME_DATA = {
       description: "Advanced piano performance and theory program",
     },
     {
-      id: '11',
+      id: '12',
       title: "📊 Data Science Student",
       organization: "Juni Learning - Year 9",
       year: "2024",
@@ -98,15 +110,16 @@ const RESUME_DATA = {
       description: "Completed data science curriculum and projects",
     },
     {
-      id: '12',
+      id: '13',
       title: "🎾 Squash Competitions",
       organization: "Hashim Khan, Silver Level Squash Zone, Greenwood Men's League",
       year: "2024",
       category: "sports" as const,
       description: "Competitive squash player in multiple leagues",
+      img: "https://lh3.googleusercontent.com/pw/AP1GczPrAdkQkATBzJYLwsWdlAusded1vMkg3GpGoXlVGDqtohj9Y4Ng75MYrdUVPMGe55eGyGngrsqB7Guzjbzg5agwkEhFhdvzsLlKrCxN45s7z8EYErYr=w1200",
     },
     {
-      id: '13',
+      id: '14',
       title: "🎻 Orchestra Cellist",
       organization: "Hadestown Musical",
       year: "2024-2025",
@@ -116,14 +129,14 @@ const RESUME_DATA = {
   ],
   sophomore: [
     {
-      id: '14',
+      id: '15',
       title: "🤝 Orchestra Volunteer",
       year: "2025",
       category: "volunteer" as const,
       description: "Volunteer work supporting orchestra programs",
     },
     {
-      id: '15',
+      id: '16',
       title: "🫶 Senior Volunteer",
       organization: "Caley Ridge",
       year: "2025",
@@ -131,7 +144,7 @@ const RESUME_DATA = {
       description: "Community service supporting senior citizens",
     },
     {
-      id: '16',
+      id: '17',
       title: "🌍 Amaxa Impact Intern",
       year: "2025",
       category: "tech" as const,

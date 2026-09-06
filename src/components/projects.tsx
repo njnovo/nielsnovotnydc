@@ -29,7 +29,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: '03',
     title: "🌱 CEA Envirnment",
-    image: "/images/projects/project-cea.svg",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczM3xuO0KK8Jybnj8T3uxLNh54YMvyGRkZpZ4AsctSnZzJt0cZ7CraQM2GLJLMOcSu4MNqRJo8ipae5arQ6OVwyOIorfRHpr9b5NbxP9DnKMdcsN72UE=w1200",
     alt: "CEA Envirnment",
     year: "25",
   },
@@ -57,7 +57,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: '07',
     title: "🏆 FTC Automated Androids Robot",
-    image: "/images/projects/project-ftc.svg",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMrkKrNZFIOxvPBz0W_6tZ9FFz6Qvi6HC4AnQNubG8EnSAkuWr3IBgFLxfuCvB31DSJnvFf34hkGIRbeUnl5QT2AHrGF3XzpfQdSbElU-JBXlPmfBZt=w1200",
     alt: "FTC Automated Androids Robot",
     year: "25",
   },
