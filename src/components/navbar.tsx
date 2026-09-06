@@ -1,61 +1,12 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import ContactPopup from "./contact-popup";
 
 export default function Navbar() {
-  const [isVisible, setIsVisible] = useState(true);
+  const isVisible = true;
   const [isContactOpen, setIsContactOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>("");
-  const pathname = usePathname();
-  const observerRef = useRef<IntersectionObserver | null>(null);
-
-  useEffect(() => {
-    if (pathname === '/') {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-
-      observerRef.current = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              // Check if the element's center is in the middle half of the viewport
-              const rect = entry.boundingClientRect;
-              const viewportHeight = window.innerHeight;
-              const elementCenter = rect.top + rect.height / 2;
-              const viewportCenter = viewportHeight / 2;
-              
-              // If element center is within middle 50% of viewport
-              if (elementCenter >= viewportHeight * 0.25 && elementCenter <= viewportHeight * 0.75) {
-                const section = entry.target.tagName.toLowerCase();
-                setActiveSection(section);
-              }
-            }
-          });
-        },
-        {
-          threshold: [0.1, 0.5, 0.9],
-          rootMargin: '-25% 0px -25% 0px'
-        }
-      );
-
-      // Observe hero and section elements
-      const hero = document.querySelector('section:first-of-type');
-      const portfolioSection = document.querySelector('section:last-of-type');
-      
-      if (hero) observerRef.current.observe(hero);
-      if (portfolioSection) observerRef.current.observe(portfolioSection);
-    }
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
-  }, [pathname]);
 
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();

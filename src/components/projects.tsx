@@ -66,9 +66,7 @@ const PROJECTS_DATA: Project[] = [
 function useProjectsByYear() {
   const projectsByYear = PROJECTS_DATA.reduce<Record<string, Project[]>>(
     (acc, project) => {
-      if (!acc[project.year]) {
-        acc[project.year] = [];
-      }
+      acc[project.year] ??= [];
       acc[project.year]!.push(project);
       return acc;
     },
