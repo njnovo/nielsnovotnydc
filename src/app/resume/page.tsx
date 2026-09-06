@@ -17,14 +17,14 @@ const RESUME_DATA = {
   freshman: [
     {
       id: '01',
-      title: "UT Austin Robotics Camp",
+      title: "🤖 UT Austin Robotics Camp",
       year: "2024",
       category: "tech" as const,
       description: "Attended intensive robotics program at University of Texas Austin",
     },
     {
       id: '02',
-      title: "First Tech Challenge - Automated Androids",
+      title: "🦾 First Tech Challenge - Automated Androids",
       year: "2024-2025",
       category: "tech" as const,
       description: "Participated in robotics competition focusing on autonomous robot design",
@@ -32,35 +32,35 @@ const RESUME_DATA = {
     },
     {
       id: '03',
-      title: "USACO Bronze",
+      title: "🥉 USACO Bronze",
       year: "2024",
       category: "academic" as const,
       description: "Achieved Bronze level in USA Computing Olympiad",
     },
     {
       id: '04',
-      title: "USACO Camp",
+      title: "💻 USACO Camp",
       year: "2024",
       category: "academic" as const,
       description: "Attended competitive programming training camp",
     },
     {
       id: '05',
-      title: "Find the Future Website Build",
+      title: "🌐 Find the Future Website Build",
       year: "2024-2025",
       category: "tech" as const,
       description: "Developed website for educational initiative",
     },
     {
       id: '06',
-      title: "FBLA Coding Category - State Competition",
+      title: "🏅 FBLA Coding Category - State Competition",
       year: "2024",
       category: "academic" as const,
       description: "Awarded prize in coding category, advanced to state level competition",
     },
     {
       id: '07',
-      title: "Science Research - Controlled Grow Project",
+      title: "🌱 Science Research - Controlled Grow Project",
       organization: "Holly Lab Collaboration",
       year: "2024-2025",
       category: "academic" as const,
@@ -68,14 +68,14 @@ const RESUME_DATA = {
     },
     {
       id: '08',
-      title: "Blackrock Neuroscience Project",
+      title: "🧠 Blackrock Neuroscience Project",
       year: "2025",
       category: "academic" as const,
       description: "Participated in neuroscience research initiative",
     },
     {
       id: '09',
-      title: "Principal Cello",
+      title: "🎻 Principal Cello",
       organization: "Symphonic Orchestra",
       year: "2024-2025",
       category: "music" as const,
@@ -83,7 +83,7 @@ const RESUME_DATA = {
     },
     {
       id: '10',
-      title: "Piano Guild Participant",
+      title: "🎹 Piano Guild Participant",
       organization: "Colorado Cantabile - Year 10",
       year: "2024",
       category: "music" as const,
@@ -91,15 +91,15 @@ const RESUME_DATA = {
     },
     {
       id: '11',
-      title: "Data Science Student",
+      title: "📊 Data Science Student",
       organization: "Juni Learning - Year 9",
       year: "2024",
       category: "tech" as const,
-      description: "Completed data science curriculum and projects",    
+      description: "Completed data science curriculum and projects",
     },
     {
       id: '12',
-      title: "Squash Competitions",
+      title: "🎾 Squash Competitions",
       organization: "Hashim Khan, Silver Level Squash Zone, Greenwood Men's League",
       year: "2024",
       category: "sports" as const,
@@ -107,7 +107,7 @@ const RESUME_DATA = {
     },
     {
       id: '13',
-      title: "Orchestra Cellist",
+      title: "🎻 Orchestra Cellist",
       organization: "Hadestown Musical",
       year: "2024-2025",
       category: "music" as const,
@@ -117,14 +117,14 @@ const RESUME_DATA = {
   sophomore: [
     {
       id: '14',
-      title: "Orchestra Volunteer",
+      title: "🤝 Orchestra Volunteer",
       year: "2025",
       category: "volunteer" as const,
       description: "Volunteer work supporting orchestra programs",
     },
     {
       id: '15',
-      title: "Senior Volunteer",
+      title: "🫶 Senior Volunteer",
       organization: "Caley Ridge",
       year: "2025",
       category: "volunteer" as const,
@@ -132,7 +132,7 @@ const RESUME_DATA = {
     },
     {
       id: '16',
-      title: "Amaxa Impact Intern",
+      title: "🌍 Amaxa Impact Intern",
       year: "2025",
       category: "tech" as const,
       description: "Website building and design for Amaxa Impact, a non-profit organization that provides education and resources to underserved communities.",
@@ -278,6 +278,13 @@ function ExperienceGrid({ experiences }: { experiences: ExperienceItem[] }) {
 
 function AboutSection() {
   const categories = ['tech', 'music', 'sports', 'volunteer', 'academic'];
+  const categoryEmoji: Record<string, string> = {
+    tech: '💻',
+    music: '🎻',
+    sports: '🎾',
+    volunteer: '🤝',
+    academic: '🎓',
+  };
   
   return (
     <section
@@ -293,11 +300,11 @@ function AboutSection() {
       <div className="space-y-6">
         <div className="bg-gray-900 border border-gray-800 p-8">
           <h1 className="text-4xl font-bold text-white mb-4">Niels Novotny</h1>
-          <p className="text-xl text-gray-300 mb-6">Student • Developer • Musician • Researcher</p>
+          <p className="text-xl text-gray-300 mb-6">🎓 Student • 💻 Developer • 🎻 Musician • 🔬 Researcher</p>
           <div className="flex flex-wrap gap-2">
-            <span className="border border-gray-600 text-white px-3 py-1 text-sm">High School Student</span>
-            <span className="border border-gray-600 text-white px-3 py-1 text-sm">USACO Bronze</span>
-            <span className="border border-gray-600 text-white px-3 py-1 text-sm">Principal Cellist</span>
+            <span className="border border-gray-600 text-white px-3 py-1 text-sm">🎓 High School Student</span>
+            <span className="border border-gray-600 text-white px-3 py-1 text-sm">🥉 USACO Bronze</span>
+            <span className="border border-gray-600 text-white px-3 py-1 text-sm">🎻 Principal Cellist</span>
           </div>
         </div>
         
@@ -306,7 +313,7 @@ function AboutSection() {
             const count = [...RESUME_DATA.freshman, ...RESUME_DATA.sophomore].filter(item => item.category === category).length;
             return (
               <div key={category} className="text-center p-4 border border-gray-800 bg-gray-900 hover:bg-gray-800 transition-colors">
-                <div className="font-semibold text-white capitalize">{category}</div>
+                <div className="font-semibold text-white capitalize">{categoryEmoji[category]} {category}</div>
                 <div className="text-sm text-gray-400">{count} activities</div>
               </div>
             );

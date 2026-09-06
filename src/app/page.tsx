@@ -25,7 +25,7 @@ export default function Home() {
                   <div className="h-full w-full bg-gray-200 transition-transform duration-300 group-hover:scale-110" />
                 </Card.Header>
                 <Card.Content className="flex-col items-start text-left space-y-4 p-8">
-                  <h3 className="text-3xl font-medium text-black">Projects</h3>
+                  <h3 className="text-3xl font-medium text-black">🛠️ Projects</h3>
                   <p className="text-lg leading-relaxed text-gray-700">
                     A curated collection of technical work spanning robotics, web development, 
                     and data science. From competitive programming platforms to volunteer 
@@ -46,7 +46,7 @@ export default function Home() {
                   <div className="h-full w-full bg-gray-200 transition-transform duration-300 group-hover:scale-110" />
                 </Card.Header>
                 <Card.Content className="flex-col items-start text-left space-y-4 p-8">
-                  <h3 className="text-3xl font-medium text-black">Resume</h3>
+                  <h3 className="text-3xl font-medium text-black">🎓 Resume</h3>
                   <p className="text-lg leading-relaxed text-gray-700">
                     An interactive journey through academic achievements, research collaborations, 
                     musical performances, and volunteer work. Spanning technology competitions, 
